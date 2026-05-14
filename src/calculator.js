@@ -43,7 +43,12 @@ function divide(a, b) {
   return a / b;
 }
 
-// Parse CLI arguments
+// Export functions for unit testing
+module.exports = { add, subtract, multiply, divide };
+
+// Parse CLI arguments — only run when invoked directly, not when required by tests
+/* istanbul ignore next */
+if (require.main === module) {
 const [, , operation, arg1, arg2] = process.argv;
 
 if (!operation || arg1 === undefined || arg2 === undefined) {
@@ -85,3 +90,4 @@ switch (operation.toLowerCase()) {
 }
 
 console.log(`${a} ${operation} ${b} = ${result}`);
+} // end require.main === module
