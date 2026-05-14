@@ -1,0 +1,1 @@
+When creating a branch name for /delefate command use a crisp name based on the prompt. For example, if the prompt is "Add user authentication", a good branch name would be "add-user-authentication". Avoid using generic names like "feature-branch" or "bugfix-branch" or a name such as "copilot/yammering-trout
